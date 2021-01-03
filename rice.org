@@ -1,0 +1,13 @@
+#+TITLE: Rice
+* TODO 
+** Update font to JetBrain Mono [50%]
+- [X] urxvt
+- [ ] polybar
+** Urxvt [0%]  
+- [ ] be able to click links and open them
+** Zsh [0%]  
+** Neovim [0%]  
+** Doom emacs [0%]  
+** Bspwm[0%]  
+** Mpd [0%]  
+** Do final test install on new machine 

@@ -1,0 +1,16 @@
+#+TITLE: Goals
+
+* Contribute source code to linux
+* Earn money from bug bounty from a company
+* Play Ballade No. 1 in G - Chopin
+* Be able to explain things as well as Chris Hadfield
+* Get an A+ in Math 320
+* Settle on dotfiles and store them on github
+* Learn Lisp
+* Get better at using org mode in order to organize my life
+* Learn ROS2
+* Publish a paper to ICRA
+* Build keyboard
+* Organize files on external drive
+* Clean up code for FPGA project
+

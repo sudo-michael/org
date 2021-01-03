@@ -1,0 +1,51 @@
+#+TITLE: Research
+This will be a node book for my USRA NSERC
+Notes should go here
+-`file:./nserc-notes.org`
+
+* <2020-05-04 Mon>
+** Questions to ask:
+*** what does this notation mean ζ(s;z,t,u(·),d(·))? - system trigectory
+*** what is the meaning of u(·)?
+*** also γ[u](·)
+*** what does R^n_d mean
+*** how to do you create a dynamical system?
+*** BRS - backwards reachable sets
+reachable at the end of the time horizon
+**** maximum represents sets that are guarenteed to reach T
+**** minimum represents sets that are guarenteed to reach T for all possible controlls
+*** BRT - backwards reachable tubes
+reachable at anytime of the time horizon
+
+* <2020-05-19 Tue>
+** AWS Deep Racer
+*** Pro
+- alsdjfalsfj
+- aslfksdjl
+*** Con
+- Doesn't look like there's an easy way to give manual controls to it
+  There's a manual mode, but it's a GUI interface
+  GitHub repo that allows to control car with PS4 controller but looks hacky
+** NVIDIA jet racer
+*** Pro
+*** Con
+**** needs 3d printed jig plate
+**** RC Car is hard to buy
+- shipped from Japan / unavailable
+**** Uses Jupter Notebooks to give inputs to car
+- the backend is just sending inputs using ServoKit over some channel
+
+
+
+* Presentation
+Notes: If including math explain it
+Don't go into too much detail
+What I'll cover
+What is HJ reachability
+    Talk about brts
+Compare solving it using matlab compared to python, speed up using fpgas
+What I did was work on simulating things with Ros and Gazebebo
+
+Talk about suboptimal controll
+Bring up u(x) >= 0 create graph
+Show demonstration

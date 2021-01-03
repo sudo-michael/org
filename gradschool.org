@@ -1,0 +1,284 @@
+
+#+TITLE: Gradschool
+"why do I want to go to gradschool"
+
+
+I changed my major from business to math and computer science four years ago after reading "Surely You're Joking, Mr. Feynman!" because I wanted to study something that kept me excited to learn more.
+I want to pursue a Master's in Computer[Computing] Science at McGill University [university] in order to obtain more research experience.
+My career goals are to obtain a Ph.D. in Computer[Computing] Science then pursue a career in research, either in academia or industry.
+My research interests are robotic safety, [Hamilton-Jacobi reachability], reinforcement learning, multi-agent systems, and computer vision.
+I ultimately want to understand to what extent can robots learn safely and develop robust methods for
+- autonomous vehicles to navigate in unknown environments safely.
+- multiple robots to co-operate and solve difficult tasks.
+
+I am currently working under the supervision of Dr. Mo Chen.
+In a recent project, we demonstrate how Hamilton-Jacobi reachability, a method to guarantee the safety of dynamical systems, can be done on an FPGA to calculate, in real-time, controls to safely navigate a dynamic system from colliding with obstacles in a changing environment.
+I wrote software that would take over a user's input and apply optimal control to an RC car when it too close to an object in order to avoid it.
+I then designed and simulated experiments before conducting them in real-life.
+Working on this project taught me the process of doing research.
+I became better at finding and understanding relevant research papers, and learnt how to properly present our ideas when writting the research paper.
+I also became proficient working with ROS, a framework for writing robot software.
+In the end, we were able to submit our paper to European Control Conference 2021.
+From this experience, I found that I am very interested with robotic safety and found it fascinating to see our results work in real-life.
+While working on the project, I wondered if it was possible to partition objects with using precomputed results from Hamilton-Jacobi reachability in order to reduce the computationly cost. This idea developed into my undergraduate thesis on safe reinforcement learning using Hamitlon-Jacobi reachability, which I will be writing in the Spring with Dr. Mo Chen.
+
+
+My motivation to pursue a career in research comes from conducting research with Dr. Mo Chen and my enjoyment in courses with research projects.
+
+One of my first research experiences was in a machine learning course. My partner and I worked on computing neural style transfer on mobile devices. Together, we experimented with various convolutional neural networks (CNN) and network compression techniques and presented our work at a poster session. I had a lot of fun playing around with different CNNs and seeing if I could create beautiful images. I certainly found that research is hard and progress is non-linear but felt like it was something worth doing because I wanted to create new knowledge. I enjoyed reading papers and thinking about how we could either improve the results or use the ideas introduced in the papers in other ways.  In an intelligent systems course, I implemented a multi-agent pathfinding (MAPF) algorithm from a research paper and compared it to other MAPFs we learned in class. I compared the results and found cases where one performs better than the other. From working on this project, I became better at implementing research papers. However, I was left wondering how the authors came up with the algorithm in the first place. This led me to try doing research over the summer with Dr. Mo Chen because I wanted to learn the process of developing an idea into a publishable paper.
+ 
+ My past work experience as a software developer intern at Minesense Technologies taught me how to work as a team and write maintainable code. I became a much better programmer while working there and gained an appreciation for well-documented code. The skills I learned at Minesense has helped me tremendously in my coursework and research. I found it fulfilling to create software that is constantly being used. I was also happy to work on a project that helped reduce carbon-emissions and hope that my research in the future could be applied to reduce carbon emissions too.
+
+In 2020, I co-founded a competitive programming club at SFU because I wanted to provide an environment for other studens who were curious about competitive programming to learn and pratice their skills. I gave lectures about problem solving techniques, data structures and algorithms, and created contest problems. I found it fufilling teaching others learn and want to continue teaching in the future.
+
+With my combined research and industry experience, I believe I am capable of being a successful graduate student at [x].
+
+I am interested in studying at [x] university because of [y]. I am extremely interested in [x]'s work in alskdjlkf asdflkajsldkfj asdflk jsdlkfjasdf lsdfkja skdfal
+
+
+# SFU
+
+# UofA
+# McGill
+
+
+
+# I want to continue my studies at UBC because of its diverse faculty and research groups.
+# I am especially interested in the works of Dr. Ian Mitchel (Hamilton-Jacobi reachability analysis) and  Dr. Michiel van de Panne (reinforcement learning, locomotion).
+ 
+* Motivations
+** What motivated you to apply to grad school?
+** Why do you feel prepared to start graduate school?
+** What areas of research interest you?
+** Why do you want to pursue a PhD in your area of interest?
+** Do you have any reservations/worries about entering a PhD program?
+** What are you looking to gain from your graduate school experience?
+** Why do you need a PhD to achieve your career goal?
+** Where do you see your field going in the next 5-10 years?
+** Where do you see yourself in 15 years?
+** What is unique about you that gives you a competitive edge over other applicants?
+
+* The Program/Institution
+** Why are you specifically drawn to this program?
+** Why do you think this program would be a good fit for you?
+** What specific resources does this institution offer to enhance your scientific trajectory?
+** How do you think your interests will fit in with the program?
+** What do you think you will contribute to the program?
+** Which faculty members’ work particularly interests you and why?
+** Have you established a relationship with one or more faculty members within the program?
+** What interests you about the city the institution is in?
+** What would make you choose this institution over other programs?
+
+* Previous Research
+** Please list the different research experiences you have had.
+** How many total years of research experience do you have?
+** How has your research experience prepared you for graduate school?
+** What questions did your research help answer?
+** What was your role in developing research ideas?
+** How did you manage your research project?
+** What was innovative about your research?
+** What was your favorite technique that you used in your undergraduate research?
+** What was the biggest challenge you encountered in your undergraduate research, and how did you deal with it?
+** How is your work distinct from your supervisor’s/principal investigator’s?
+** What do you think are your most significant research accomplishments?
+** What do you consider to be your best paper/work and why?
+** What has been the impact of your research?
+** Do you expect to publish before starting graduate school?
+** If you were starting your project again today, what would you do differently?
+
+* Current/Future Research
+** What are your research interests?
+** What are the big picture questions you want to investigate?
+** What are the biggest challenges/questions in your field of research?
+** How do you plan to approach your questions?
+** How do you see this work impacting the field?
+** How does the work you propose follow on from what you are already doing?
+** What skills do you want to develop at this institution?
+** Do you plan to apply for additional funding?
+** What funding opportunities are you aware of, or what would you like to apply for?
+** How would you convince a funding body that they should fund your research?
+** How would you fit with the existing activities in the department?
+** If we gave you unlimited resources, what would you do with them?
+** Who do would you expect to collaborate with in the institution?
+** Why do you want to collaborate with them?
+** What is an interesting paper you have read lately?
+
+If you have a specific project in mind…
+
+    What is the overall importance of this project?
+    Can you see any of your research proposal failing?
+    What will you do if your hypothesis is proved wrong?
+    What resources will you need?
+    What opportunities for multi-disciplinary work does your research offer?
+
+Potential Advisors
+
+    What do you want to work on in my lab?
+    What interests you about my research?
+    What do you know about my research?
+    Who are you interested in working with?
+    What techniques have you learned that you could use in my lab?
+
+Teaching
+
+    Do you have any teaching experience?
+    How do you feel about teaching?
+    How do you feel about mentoring undergrads?
+    How would you deal with any conflict/disagreement within the research group?
+    Do you have an example of when you have had to deal with a disagreement?
+
+Personal
+
+    What do you do in your free time (not in the lab)?
+    What motivates you?
+    What drives you as a scientist?
+    Who has influenced you the most?
+    How do you work best – independently, or with a team, at home?
+    How do your interests fit with the strengths and goals of the program?
+    What do you expect to be challenging about graduate school? What are your plans for managing those challenges?
+    Graduate school often involves a combination of intense days, long nights, and high expectations. What strategies will you use to manage this combination of demands?
+    What are your strengths and weaknesses?
+    Tell us about a time when things didn’t go the way you wanted. How did you handle it, and what did you learn from the experience?
+    Tell us about your most successful or interesting research experience in a lab environment. Which of your qualities helped facilitate this success?
+    Describe a time that you encountered a significant personal obstacle? How did you handle it?
+    Is there any information pertinent to your application that you would like to add?
+    In what ways, other than research and teaching could you contribute to this department?
+
+Questions for you to ask current grad students
+
+    Does the environment feel more collaborative or competitive?
+    What is the funding structure/guarantee for students?
+    Is it an inclusive environment?
+    Where do you (and students in general) live?
+    What is the area around campus like?
+    Do you think the stipend reflects the cost of living?
+    Is the university helpful with finding housing?
+    How easy/difficult was the process of joining a lab?
+    Do most people join their first choice lab?
+    How much time are you expected to spend in the lab?
+    How would you describe your PI's advising style?
+    How do you maintain a successful relationship with your advisor?
+    How regularly/quickly does your advisor publish?
+    What research are you working on?
+    How quickly were you able to start your research?
+    Is the project you're working on what you thought you'd be doing, or has the project you're working on gone in any unexpected directions?
+    Who is on your committee and why?
+    Would you choose this advisor if you were doing it over?
+    Do you get to attend conferences?
+    What do you think of the courses - useful content, well taught, relevant to your research/goals?
+    How easy/hard is it to customize the program?
+    What would you change about the program?
+    What kind of schedule do you work?
+    What do grad students do in their free time?
+    Do most students have a good work/life balance?
+    Do grad students in this program hang out with each other?
+    Do you know many people in grad school who regret starting it?
+    Do you know people who have left the graduate program?
+    What kind of resources does the program offer (e.g. for mental health, career development, learning new skills, etc.)?
+    Is there anything you wish you had taken into consideration when making your decision about where to attend?
+
+Questions for you to to ask potential PI’s
+
+    I read your paper/book X. Can you tell me about your future research goals related to X? What are your current projects?
+    What research projects do you have that would be looking for graduate students?
+    What advice would you give to a student who wants to be successful in your program? Are there any specific pitfalls to be avoided?
+    What are the expectations for a graduate student in your lab?
+    Do students create their own projects or work on something already developed/in progress?
+    How is your lab organized? Do you have a lab manager, or do other members of the lab take on this role?
+    Do you have lab/group meetings, and what is the format of those meetings?
+    How much collaboration is there within the lab?
+    How much do your students publish?
+    How often do you sent students to conferences?
+    How long do students in your lab take to complete their PhD?
+    What do students from your lab typically do after graduation?
+    What is the big picture/goal/focus/priority of the department?
+
+Questions for you to ask other interviewers (like program or admissions directors)
+
+    What are the responsibilities of grad students in this program?
+    What is the workload/time commitment?
+    Do grad students have to TA? How many terms do you TA?
+    Are students generally collaborative or competitive?
+    How big is the program?
+    What's the biggest strength of the program?
+    What professional development services are available?
+    How/when are students paired with advisors?
+    What does the program do if someone doesn't find a lab to join by the deadline?
+    What percentage of students complete the PhD? Pass quals?
+    How would you compare this program to X and Y?
+    Is there funding available for attending things like conferences or summer schools?
+    What are the career outcomes for students in this program?
+
+
+* TODO Mcgill [100%]
+DEADLINE: <2021-01-01 Fri>
+- finish uploading all remain stuff https://cas.mcgill.ca/cas/login?locale=en&service=https%3A%2F%2Fnimbus.mcgill.ca%2FuApply%2Fj_spring_cas_security_check%3Flang%3Den
+- mlu98 pokemon123
+EMAIL
+- https://sites.google.com/site/hsiuchinlin/prospective-students
+  
+- jan 1
+* TODO Alberta [100%]
+DEADLINE: <2021-01-31 Sun>
+- [X] remake uofa application
+- [X] go over application again
+- [X] submit
+- [ ] January 31st
+- [ ] GARS
+- gars: ik7hal0rp
+* TODO SFU [33%]
+DEADLINE: <2021-02-08 Mon>
+- [X] submit application
+- [ ] statement of purpose
+- [ ] CV
+- [ ] unofficial transcript
+- [ ] references: Feb 8
+- Academic interest
+  
+  I am interested in reinforcement learning, Hamilton-Jacobi reachability, and computer vision.
+  I want to develop robust algorithms that will help artificial agents, such as self-driving cars, learn and navigate unknown environments safely.
+* TODO UBC
+https://www.cs.ubc.ca/students/grad/admissions
+- upload proof of canadian citizenship (passport)
+- ref jan 6
+** Min B+ in 3rd and 4th year courses
+** 12+ units of cs A- or above
+* References
+** Mo Chen
+Assistant Professor
+School of Computing Science
+
+Simon Fraser University
+Burnaby, British Columbia
+Canada V5A 1S6
+
+
+mochen@sfu.ca
+** Petr Lisonek
+Professor
+Department of Mathematics
+
+Simon Fraser University
+Burnaby, British Columbia
+Canada V5A 1S6
+
+E-mail: plisonek@sfu.ca
+Phone: Line suspended as of September 1st, 2020 due to campus closure. Please use e-mail instead.
+** Binay Bhattacharya
+Professor
+School of Computing Science
+
+Simon Fraser University
+Burnaby, British Columbia
+Canada V5A 1S6
+
+binay@cs.sfu.ca
+778 782 3133
+
+
+| School | Deadline |
+|--------+----------|
+| McGill | Jan. 1   |
+| UBC    | Jan. 6   |
+| UofA   | Jan. 31  |
+| SFU    | Feb. 8   |

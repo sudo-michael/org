@@ -1,0 +1,292 @@
+#    -*- mode: org -*-
+
+
+Archived entries from file /home/mike/org/todo.org
+
+
+
+* DONE done
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2020-11-18 Wed 00:51
+  :ARCHIVE_FILE: ~/org/todo.org
+  :ARCHIVE_OLPATH: somethign
+  :ARCHIVE_CATEGORY: todo
+  :ARCHIVE_TODO: DONE
+  :END:
+
+
+* TODO clear laundry basket
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-11-18 Wed 10:18
+:ARCHIVE_FILE: ~/org/todo.org
+:ARCHIVE_OLPATH: Feel Good
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: TODO
+:END:
+
+
+* TODO 260 [1/1]
+DEADLINE: <2020-11-20 Fri>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-11-19 Thu 00:31
+:ARCHIVE_FILE: ~/org/todo.org
+:ARCHIVE_OLPATH: Tasks
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: TODO
+:END:
+- [X] wiley - just piece wise functions!
+
+* TODO scan official transcript
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-11-19 Thu 00:41
+:ARCHIVE_FILE: ~/org/todo.org
+:ARCHIVE_OLPATH: Feel Good
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: TODO
+:END:
+
+* TODO ecc [2/3]
+DEADLINE: <2020-11-19 Thu>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-11-21 Sat 10:49
+:ARCHIVE_FILE: ~/org/todo.org
+:ARCHIVE_OLPATH: Tasks
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: TODO
+:END:
+- [X] import both videos to imovie
+- [X] match animation with them
+- [ ] create image for paper
+
+* TODO 345 [6/6]
+DEADLINE: <2020-11-19 Thu>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-11-21 Sat 10:49
+:ARCHIVE_FILE: ~/org/todo.org
+:ARCHIVE_OLPATH: Tasks
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: TODO
+:END:
+- [X] 1. 
+- [X] 2.
+- [X] 3.
+- [X] 4.
+- [X] 5.
+- [X] 6.
+
+* TODO 447 - assignment 5 [0/5]
+DEADLINE: <2020-11-25 Wed>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-11-25 Wed 01:54
+:ARCHIVE_FILE: ~/org/todo.org
+:ARCHIVE_OLPATH: Tasks
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: TODO
+:END:
+- [ ] q1
+- [ ] q2
+- [ ] q3
+- [ ] q4
+- [ ] q5
+
+* TODO 345 [0/6]
+DEADLINE: <2020-11-26 Thu>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-11-26 Thu 13:42
+:ARCHIVE_FILE: ~/org/todo.org
+:ARCHIVE_OLPATH: Tasks
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: TODO
+:END:
+- [ ] 1. 
+- [ ] 2.
+- [ ] 3.
+- [ ] 4.
+- [ ] 5.
+- [ ] 6.
+
+* TODO 308 - homework 3 [0/8]
+DEADLINE: <2020-11-30 Mon>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-11-30 Mon 13:48
+:ARCHIVE_FILE: ~/org/todo.org
+:ARCHIVE_OLPATH: Tasks
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: TODO
+:END:
+- [ ] q1
+  use sat
+- [ ] q2
+  m clauses = (x_i O x_j O x_k) ... 
+  talk about nfa
+- [ ] q3
+  Given some input y = y_1, y_2 \dots y_k
+
+
+  Base case:
+  - get all substrings of Y
+  - calculate dp[i][j] = 1 if y_i..y_j \in L
+  Recursive:
+
+
+  Want to ask solve(1, n):
+  #+begin_src python
+  def solve(i, j):
+      if used dp[i][j]:
+          return dp[i][j]
+      else:
+          dp[i][j] = any(solve(i, k) and solve(k+1, j) for k in range(i+1, j))
+          return dp[i][j]
+
+  return solve(1, n, L)
+  #+end_src
+  
+
+  
+
+
+  Suppose that L \in P
+  Let |L|  = n
+  Given some input y = y_1, y_2 \dots y_k
+  base cases:
+  calcualte dp[i][i+n] for all i = 1, 2, .. k - n + 1
+  dp[i][j] = something
+- [ ] q4
+  Clauses can have any amount as variable
+  a.
+     Let's create a graph
+     we have C_k clauses
+  
+  To show something is in P, find a P algorithm dfs / look at 2-sat
+  Reudction from 3-sat -> CNF[3]?
+- [ ] q5
+  MAX-CUT is in NP because given a set S of cut vertices of, we can check in polynomial time wheter it is a max-cut of size k by coloring all neighbours of a vertex in S blue, then checking if any vertex in S has been colored blue
+
+  check that all neighbours of s \in S is not in S
+
+  Given an instance of 3-sat, we want to reduce in polynomial time to
+  a graph that has a max-cut of at least k if 3-sat is satisfiable
+
+
+
+  http://cgm.cs.mcgill.ca/~athens/cs507/Projects/2001/CW/npproof.html
+- [ ] q6
+- [ ] q7
+- [ ] q8
+- NL = NSPACE(log n)
+
+* TODO watch all graph theory lectures 
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-11-30 Mon 13:48
+:ARCHIVE_FILE: ~/org/todo.org
+:ARCHIVE_OLPATH: Catchup
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: TODO
+:END:
+
+* TODO watch chapter 6 for coding thoery
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-11-30 Mon 13:48
+:ARCHIVE_FILE: ~/org/todo.org
+:ARCHIVE_OLPATH: Catchup
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: TODO
+:END:
+
+* SDFLDF
+DEADLINE: <2020-11-26 Thu>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-01 Tue 20:59
+:ARCHIVE_FILE: ~/org/todo.org
+:ARCHIVE_CATEGORY: todo
+:END:
+send all letter due dates to mo
+
+* TODO 447 - assignment 7[0/5]
+DEADLINE: <2020-12-02 Wed>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-03 Thu 00:29
+:ARCHIVE_FILE: ~/org/todo.org
+:ARCHIVE_OLPATH: Tasks
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: TODO
+:END:
+- [ ] q1
+- [ ] q2
+- [ ] q3
+- [ ] q4
+- [ ] q5
+
+* TODO 447 - assignment 8 [0/5]
+DEADLINE: <2020-12-02 Wed>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-03 Thu 00:29
+:ARCHIVE_FILE: ~/org/todo.org
+:ARCHIVE_OLPATH: Tasks
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: TODO
+:END:
+- [ ] q1
+- [ ] q2
+- [ ] q3
+- [ ] q4
+- [ ] q5
+
+* PROJ Math 447 (1) days
+DEADLINE: <2020-12-09 Wed>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-11 Fri 12:57
+:ARCHIVE_FILE: ~/org/todo.org
+:ARCHIVE_OLPATH: Exams
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: PROJ
+:END:
+7:00PM - 10:00Pm
+
+* TODO 308 - quiz 2
+DEADLINE: <2020-12-04 Fri>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-11 Fri 12:57
+:ARCHIVE_FILE: ~/org/todo.org
+:ARCHIVE_OLPATH: Tasks
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: TODO
+:END:
+- 
+
+* TODO MATH 345 (1) days
+DEADLINE: <2020-12-12 Sat>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-13 Sun 00:06
+:ARCHIVE_FILE: ~/org/todo.org
+:ARCHIVE_OLPATH: Exams
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: TODO
+:END:
+8:30AM - 11:30AM
+- give a graph and reason able it
+- draw graph
+- final will be more better
+
+* PROJ CMPT 308 (0) days
+DEADLINE: <2020-12-13 Sun>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-16 Wed 13:30
+:ARCHIVE_FILE: ~/org/todo.org
+:ARCHIVE_OLPATH: Exams
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: PROJ
+:END:
+3:30PM - 6:30PM
+
+* PROJ MATH 260 (4) days
+DEADLINE: <2020-12-17 Thu>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-19 Sat 10:36
+:ARCHIVE_FILE: ~/org/todo.org
+:ARCHIVE_OLPATH: Exams
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: PROJ
+:END:
+7:00PM - 10:00 PM
+35% before midterm

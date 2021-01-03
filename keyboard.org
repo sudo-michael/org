@@ -1,0 +1,10 @@
+#+TITLE: Keyboard
+
+This is a blog about me building a keyboard
+* TODO build keyboard [0%]
+- [ ] lube stabilzers
+- [ ] lube switches
+- [ ] install stabilzers
+- [ ] verify layout is correct
+- [ ] solder
+- [ ] remap keys

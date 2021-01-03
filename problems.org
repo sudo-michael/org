@@ -1,0 +1,98 @@
+#+TITLE: Problems
+
+This will be a journal of all problems I solve.
+I will become better at problem solving
+todo
+https://leetcode.com/problems/rotate-array/
+
+=org-time-stamp C-c .=
+
+* Diameter of Binary Tree
+** https://leetcode.com/problems/diameter-of-binary-tree/
+** Last solved: <2020-04-11 Sat>
+** Attempt
+*** guessed that the longest path must go through the root
+*** implemented it as bfs with stack<pair<node, int>>
+*** when it gave wrong answer and an example why algorithm didn't work
+*** thought I could do some recurrence that acted like a dfs but didn't
+*** try thinking it out and gave up too early?
+** Solution
+*** Use dfs
+*** for any node, find the height of it's left and right children then return number of nodes
+*** if node is leaf : return 1
+*** L = dfs(node->left)
+*** R = dfs(node->right)
+*** ans = max(ans, L+R+1)
+*** return max(L, R) + 1
+*** final ans is ans-1 because we only care about number of edges
+* Merge K lists
+** https://leetcode.com/problems/merge-k-sorted-lists/discuss/572067/Simple-Recursion-Solution-in-C%2B%2B
+** Last solved: <2020-04-11 Sat>
+** Attempt
+*** add them into a priority queue them add nodes to a ll while the queue isn't empty
+*** in cpp, priority queue in increasing order: std::priority_queue<T, std::vector<T>, std::greater<T>>
+*** time: O(n log n) space: O(n)
+** Solution
+*** attempt
+* Last Stone Weigth
+** https://leetcode.com/problems/last-stone-weight/
+** Last solved: <2020-04-12 Sun>
+** Attempt
+*** looked at size, thought it was dp
+*** then realized it was just apply the algorithm until < 2 stones remain
+*** use priority queue
+*** Time O(n log n) Space O(n)
+** Solution
+*** attempt
+*** forgot adding into priority queue was O(log n)
+* Contiguous Array
+** https://leetcode.com/problems/contiguous-array/
+** Last solved: <2020-04-14 Tue>
+** Attempt
+*** tried brute force, implemented it wrong
+*** realized I couldn't implement a brute force soln and gave up
+*** guessing it's dp and you can do it in O(n)
+** Solution
+*** for brute froce, 2 loops should be
+`
+for (int start = 0; start < nums.size(); start++)
+{
+    int zero_count, one_count = 0;
+    for (int end = start; end < nums.size(); end++)
+    {
+        if (nums[end]) one_count++;
+        else zero_count++;
+        if (one_count == zero_count)
+        {
+            ans = max(ans, end - start + 1);
+        }
+    }
+}
+`
+*** best solution was to think of 1, 0 as adding to a count
+*** then use a hashmap to remember when was the last time we had that value
+*** if we found a count again, that's mean there's an even amount of 0 and 1
+... todo
+* Shifting Letters
+** https://leetcode.com/problems/shifting-letters/
+** Last solved: <2020-04-15 Wed>
+** Attempt
+*** notice that left and right shift cancel out
+*** all you had to do was add them and find which way to do so
+*** std::rotate preforms a left rotation, using r iter does a right shift
+*** std::rotate(s.begin(), s.begin() + shift amount; s.end())
+*** had a bug where I got "" string, that's because shift > s.size()
+** Solution
+*** attempt
+
+* Product of Array Except Self
+** https://leetcode.com/problems/product-of-array-except-self/
+** Last solved: <2020-04-15 Wed>
+** Attempt
+*** did O(1) space since I remember this from before
+*** since it's O(n) we need to generate the ans is one or two passes
+*** since we can't do division we note that it's just the left side prod * right side prod
+*** keep track of left side prod and update ans going up the vector
+*** do the same right side prod except going down the vector
+** Solution
+*** attempt

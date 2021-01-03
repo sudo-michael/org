@@ -1,0 +1,118 @@
+* Exams
+* Tasks
+- Ama withdraw $2k from credit union
+* Honours Thesis
+EVERYTHING NEEDS TO BE EXPLAINED
+READER SHOULDN"T FIGURE ANYTHING OUT
+WHY ARE WE READING THIS
+** Gyms
+- https://github.com/mit-acl/gym-collision-avoidance
+- https://unity3d.com/machine-learning
+- https://gym.openai.com/envs/#toy_text
+- https://github.com/duckietown/gym-duckietown
+- https://github.com/wil3/gymfc/
+- https://github.com/cjy1992/gym-carla
+- https://github.com/JacopoPan/gym-pybullet-drones
+** Methods
+- Proximal Policy Optimization (PPO)
+** Papers
+*** Concrete Problems in AI Safety
+https://arxiv.org/pdf/1606.06565.pdf
+
+Purpose
+*** Benchmarking Safe Exploratino in Deep RL
+https://cdn.openai.com/safexp-short.pdf
+
+Base line algorithms:
+1. Proximal Policy Optimization (PPO) + based on lagrange
+2. Constrained Policy Optimization (CPO)
+3. Trust Region Policy Optimization (TRPO)
+   
+There is not yet a universally agreed-upon way to evaluate and compare different methods  
+
+other approaches to safe reinforcement learning without constraints are
+either insufficient or impraticical. 
+
+
+Without constraints either insufficient or impractical.
+Approaches to safety that focus solely on measures of return for a single scalar reward function (where such scalar reward function is kept fixed over the course6
+of training)—as either monotonic improvement in expected return, a constraint on the variance ofreturn, return above a minimum value, or a risk measure on return—inappropriately conflate task performance specifications and safety specifications, and are therefore inadequate for the reasons described previousl
+
+Constrant algortihm, evaluate using Lagrangian Methods:
+- adaptive pendaly coefficients to enforce constraints
+- f(\theta) objective, and g(\theta) <= 0 constraint,
+  solve equivalent unconstrained max-min optimization problem
+  \max_{\theta}\min_{\lambda \geq 0} L(\theta, \lambda) = f(\theta) - \lambd ag(\theta)
+  
+*** Trial without Error: Towards Safe ReinforcementLearning via Human Intervention
+https://arxiv.org/pdf/1707.05173.pdf
+
+Literally use humans as a clasifer to determine wheter an action was safe or not
+It works! Agents are able to do better than without oversight
+
+This probably means that if there's some way to decide if actions are good or not,
+our model will do better!
+
+*** Safe Exploration in Continuous Action Space
+https://arxiv.org/pdf/1801.08757.pdf
+
+Glaol of zero-constraint-violations in tasks where agent is constrained to a
+confiened region
+
+Let u_\theta(s) := action from deep policy network
+Use it as an input to linearized safety-signal model:
+u^~_\theta(s) = arg min_a f(s, a, u(s))
+
+uhh.. makes it quadraic objecive function that can be soved since it's now a convex problem
+
+*** ADVERSARIAL POLICIES: ATTACKING DEEP REINFORCEMENT LEARNING
+https://arxiv.org/pdf/1905.10615.pdf
+
+vicim playing against opponent in two-player Markov game
+attacker can control the opponent
+game M := (S (A_a, A_v), T, (R_a, R_v))
+want to maximize sum of rewards
+
+
+** Other papers I don't have time to go over
+*** A Lyapunov-based Approach to Safe ReinforcementLearning
+https://proceedings.neurips.cc/paper/2018/file/4fe5149039b52765bde64beb9f674940-Paper.pdf
+
+*** Learning-based Model Predictive Control for SafeExploration and Reinforcement Learning
+https://arxiv.org/pdf/1906.12189.pdf
+
+*** Reach-Avoid Games With Two Defenders and One Attacker: An Analytical Approach
+
+** TODO Do a lit review for the following subjects
+*** Safe learning
+**** Proposal
+I want to use HJ reachability as a constraint in safety learning
+- use it to help initalize model
+- calculate BRT and use them as constraints
+**** What is the method
+- Constraint MDP
+**** What is the application
+**** Sources
+***** Responsive Safety in Reinforcement Learning by PID Lagrangian Methods
+- https://arxiv.org/pdf/2007.03964.pdf
+- reward and cost policy gradients of the first order lagrangian method
+*** Robust RL
+**** Proposal
+**** What is the method
+**** What is the application
+**** Sources
+- https://arxiv.org/pdf/1703.02702.pdf
+*** Reach avoid games
+uhh probably not
+** Proposal
+I want to investigate using HJ reachability as 
+
+** Grading Scheme
+- 65% report
+- 25% oral presentation / defence
+- 10% weekly meetings
+** Other papers
+*** Controlling an AV with DRL
+- https://arxiv.org/abs/1909.12153
+
+* Catchup

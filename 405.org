@@ -1,0 +1,17 @@
+#+TITLE: 405
+* Random algorithms
+** union bound
+*** p[a] + p[b] - p[a and b] <= p[a] + p[b]
+* Master Thm
+** https://math.stackexchange.com/questions/646908/question-about-the-master-theorem-of-recurrences-no-b-term
+* Approximation algorithms
+** find a lower bound of the optimal solution
+** find a upper bound of the optimal solution
+** Bellman-Ford
+*** find shortest path in a weighted digraph
+*** used if we want to check for negative cycles
+**** todo so, run |V| - 1 times, then if the |V| time, the min cost decreases then one exists
+*** running time O(|V||E|)
+*** space O(|V|)
+* Network flow
+** O(Ef)  / O(VE^2)

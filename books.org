@@ -1,0 +1,14 @@
+#+TITLE: Books
+* Atomic Habits
+** How to Create a Good Habit
+1. Make it obvious
+2. Make it attractive
+3. Make it easy
+4. Make it satisfying
+** How to Break a Bad Habit
+1. Make it invisible
+2. Make it unattractive
+3. Make it difficult
+4. Make it unsatisfying
+
+   

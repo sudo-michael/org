@@ -1,0 +1,4 @@
+#+TITLE: Ideas
+* RL agent that takes piano sound as input and learns how to replicate the sound on a piano
+* Create a robot that can face shelves
+* RL as a 2-player game

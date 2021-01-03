@@ -1,0 +1,4 @@
+#+TITLE: Ros Nserc
+This will cover all my notes of the implementation of my nserc
+Using ROS Melodic
+* http://wiki.ros.org/husky_gazebo/Tutorials/Simulating%20Husky

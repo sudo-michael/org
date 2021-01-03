@@ -1,0 +1,22 @@
+* TODO - ICRA oct 31 [0/0]
+- Account ID: 831950980227
+- IAM user name: minh-aws
+- password: NewYorker123
+- steps
+  1. start ec2 instance
+  2. download https://github.com/angristan/openvpn-install#faq and install
+     - use public IPv4 ip from instance information -- probably have to do this each time
+  3. (aws) instance allow tcp connection 11311 (ros) inbound and outbound
+  4. (aws) instance allow udp connection 1194 (openvpn) inbound and outbound
+  5. (aws) download .opvn file to any client (maybe create 1 for each) [robot, computer]
+  6. client: sudo openvpn --config asdsasdf.opvn
+  7. (aws) check systemctl status openvpn@server.service is running
+  8. check i can ping server from client
+  9. check i can ping client from server
+  10. on client allow inbound udp from server
+      - sudo ufw allow from ip to any port 11311 proto tcp
+      - sudo ufw allow from ip to any port 1194 proto udp
+  11. (aws) `ip addr show` to find current vpn ip and use it for ROS_MASTER_URI=http://ip:11311
+  12. use same ROS_MASTER_URI on client
+  13. (aws) export ROS_HOSTNAME=vpn ip of aws
+  14. client export ROS_HOSTNAME=vpn ip of client

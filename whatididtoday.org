@@ -1,0 +1,6 @@
+#+TITLE: Whatididtoday
+# SPC m d t insert date
+
+* <2021-01-02 Sat> 
+** read x pages of Atomic Habits
+

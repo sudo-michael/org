@@ -1,0 +1,10 @@
+#+TITLE:MAGIT NOTES
+SPC g g - open
+g r - refresh buffer
+TAB - open/hide stuff
+ENTER - over file -> open in new buffer
+s - over file -> stage
+  - can TAB then select portion to stage only
+c - commit
+C-c C-c when done
+p - push

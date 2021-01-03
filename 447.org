@@ -1,0 +1,62 @@
+#+TITLE: 447
+* [g(x)]
+Woring in field F[x] / f(x)
+[g(x)] := {h(x) \in F[x] : h(x) \equiv g(x) mod f(x)}
+
+Basically polynomials that have g(x) as it's remainder when divided by f(x)
+In Z_5, [3] = {3, 3 +/- 5, 3 +/10, ...} = {.. -7, -2, 3, 8, 13, 18 ... }
+* vector to polynomial representation
+Example:
+(0 2 1 2) \in V_4(Z_3) <-> 2x + x^2 + 2x^3
+
+(a_0, a_1, a_2, \dots a_{n-1}) <-> a_0 + a_1x + a_2x^2 \dots + a_{n-1}x^{n-1}
+
+() * () is polynomial multiplication
+remember working over F(x)/x^n -1 so x^n \equiv 1
+* cyclic subspaces of V_n(Z)
+We know that V_n(Z) corresponds to Z/x^n - 1
+so we need to factor x^n-1 into polynomials
+There are 2^k cyclic subspaces, where k is the factors of x^n-1
+The cosets of the factors of x^n-1 form cyclic subspaces 
+* Cyclic (n-k)-code over F is constructed from a monic polynomial of degree n-k divide x^n-1 in F[x]
+* Reciprocal Polynomila
+If h(x) = h_0 + h_1(x) + ... + h_kx^k
+R.polynomila is
+h_R(x) = h_k + h_{k-1}x + ... + h_0x^k
+
+If f(x) = 2x^4 + 3x^2 + 5x + 6,
+then the reciprocal of f(x) would be
+6x^4 + 5x^3 + 3x^2 + 2
+
+* 5.6
+** therom 5.10
+- x^n-1 = g(x)h(x)
+  - deg g(x) = n - k
+  - deg h(x) = k
+- g is a generator polynomial for a cyclic (n, k)-code C over F
+  with g_{n-k} = 1.. why?
+- PCM for C is h_R(x) where h_k =1 and h_0 \neq 0
+- the dual code C^perp is a cyclic (n, n-k)-code over F and it's generator
+  polynomial is h_0^{-1}h_R(x) .. what is h_0^{-1}?
+** encoding for cyclic (n,k)-code F
+- represent codewords in V_n(F) as {a(x) : a(x) = 0 or deg a(x) < k}
+- encoding is done by a -> aG so we obtain the following
+  a(x)G = a(x)g(x) = \sum_{i=0}^k a_ix^ig(x)
+** therom 5.11
+Let C be a cyclic (n,k)-code over F with generator polynomiall g(x) and PCM H = [I_{n-k} A]. Let r <-> r(x) be a received word and s <-> s(x) be it's syndrome Hr^T.
+Then s(x) = r(x) mod g(x)
+
+Key idea: We don't have to calculate H, we just have to calculate r(x) mod g(x)
+Proof:
+** decoding for cyclic (n,k)-code F
+- write v <-> v(x) to indicate that v(x) is the polynomial representation of the vector v
+** Lemma: If an error code and it's syndrome has weight <= floor((d-1)/2) then we can easily caulate error code  as (s^T, 0) <- len n
+Let C be a (n,k,d)-code with PCm H = [I_{n-k} A].
+Let e be a word of weight <= floor((d-1)/2) and let s = He^T be its syndrome iwth respect to H
+If w(s) <= floor()
+
+Proof Let e = (s^T, 0)
+** cyclic run
+a cyclic run of a k zeros in a word of length n >= k is k cyclically consecutive components of thhe word all having the value 0
+For example e= (000101110) contains a cyclic run of 4 zeros
+** Tutorial

@@ -1,0 +1,8 @@
+#+TITLE: Nserc Notes
+
+Notes from NSERC
+* Planning Algorithms
+** x^.= f(x,u), where x^. is a velocity
+* non-adapting strategy: players cannot see into the future
+* Let's play a game, I have this function G(t, x) = min_{gamma in disturbance}max_{a in actions}J_t(x, a(), gamma[a]()) Disturbance wins if G(t, x) <= 0 otherwise acitions wins. This is why disturbance tries to minimize G(t,x)
+* https://people.eecs.berkeley.edu/~somil/Papers/Introduction_to_Reachability_to_Share.pdf

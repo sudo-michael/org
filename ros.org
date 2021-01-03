@@ -1,0 +1,46 @@
+#+TITLE: Ros
+Tutorial Notes
+=== Highlights ===
+When working within a workspace, remember to do =source devel/setup.bash=
+* Create ROS workspace
+** create a dir and src directory insider dir and do 'catin_make' in dir
+* Filesystem rools
+** rospack find [package]
+get informatino abount packages
+** roscd [package]
+change directory to package or a stack
+goes to /opt/ros/melodic
+** rosls
+ls directly in a package by name rather than  absoute path
+* ROS Package
+** they are a catkin package that contains an .xml
+** has a cmake file
+** each package must be in it's own folder
+src/
+    package_1/
+        CMakeLists.txt
+        package.xml
+    package_2/
+** =catkin_create_pkg [name] [package] [package] ...=
+** afterwards we need to source it?
+** rospack depends1 [package]
+list first-order dependancies
+** theres some more stuff on editing package.xml but skipping for now
+
+* Rosnode
+** roscore
+does something
+** rosnode
+*** list
+output list of ros nodes
+*** info [name]
+** rosrun
+*** start a node from a package
+* Ros topics
+** rosrun rqt_graph rqt_graph
+shows a graph of all the topics
+arrow points to the subscriber
+** rostopic
+*** echo [topic]
+shows the message that is published from the topic
+** there's a bit more stuff but worry about it if i have to dead with topics

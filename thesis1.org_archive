@@ -1,0 +1,51 @@
+#    -*- mode: org -*-
+
+
+Archived entries from file /home/mike/org/thesis1.org
+
+
+* TODO Safe learning
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2020-12-29 Tue 00:29
+  :ARCHIVE_FILE: ~/org/thesis1.org
+  :ARCHIVE_OLPATH: Do a lit review for the following subjects
+  :ARCHIVE_CATEGORY: thesis1
+  :ARCHIVE_TODO: TODO
+  :END:
+** Proposal
+I want to use HJ reachability analysis to decrease
+the training time of RL algortihms for a car trying to park
+into a parking stall
+** What is the method
+Calculate rough BRT during training
+** What is the application
+Cars to park
+** Model
+*** Unity ML agents
+- https://github.com/Unity-Technologies/ml-agents
+*** OpenAI's safety gym
+- https://github.com/openai/safety-gym
+** Sources
+- 
+
+  
+
+* TODO Reach avoid games
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2020-12-29 Tue 00:29
+  :ARCHIVE_FILE: ~/org/thesis1.org
+  :ARCHIVE_OLPATH: Do a lit review for the following subjects
+  :ARCHIVE_CATEGORY: thesis1
+  :ARCHIVE_TODO: TODO
+  :END:
+** What's been done
+ra games with 2 defenders and one attacker
+** Proposal
+I want to do x
+- expore reach 
+** What is the method
+** What is the application
+** Sources
+- https://arxiv.org/pdf/1703.02702.pdf
+
+

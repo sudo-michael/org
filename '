@@ -1,0 +1,14 @@
+#+TITLE: Research
+This will be a node book for my USRA NSERC
+Notes should go here
+-`file:./nserc-notes.org`
+
+* <2020-05-04 Mon>
+** Questions to ask:
+*** what does this notation mean ζ(s;z,t,u(·),d(·))? - system trigectory
+*** what is the meaning of u(·)?
+*** also γ[u](·)
+*** BRS - backwards reachable sets
+**** maximum represents sets that are guarenteed to reach T
+**** minimum represents sets that are guarenteed to reach T for all possible controlls
+*** BRT - backwards reachable tubes

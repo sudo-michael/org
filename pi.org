@@ -1,0 +1,14 @@
+#+TITLE: Pi
+Current IP: 192.168.0.14
+* Installation II
+Did not write all the instructions clearly so I'm redoing it now
+Since I'm now using ubuntu, I just followed the instructions on
+the website and it just worked
+* To get wifi working
+I installed nmcli as a network manager
+used ~nmcli d wifi list~ to scan for the wifi
+then used ~nmcli d wifi connect <SSID> password <PASSWORD>~
+
+I found the ip of the pi using ~ip -4 addr show | grep global~
+* HDMI output was not working on a TV
+To fix this issue I
