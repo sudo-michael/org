@@ -1,0 +1,6 @@
+#+TITLE: Papers
+
+What I think makes good RL papers
+1. code is included and results can be replicated
+2. all variables are defined, and are consistant
+3. all equations are numbered

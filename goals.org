@@ -13,4 +13,4 @@
 * Build keyboard
 * Organize files on external drive
 * Clean up code for FPGA project
-
+* Blog post: basic memory managment: from c to c++

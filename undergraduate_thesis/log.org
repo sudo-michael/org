@@ -1,0 +1,35 @@
+#+TITLE: Log
+* <2021-01-12 Tue>   
+- I will have to train a model, but I'm not sure exactly what the problem is
+  for example, I know I want to be able to avoid objects, but it should work
+  for any environment of those objects instead of training a model
+  for just 1 environment
+- am I going to use a DQN?
+- value iteration vs policy iteration vs q learning?
+- [ ] find simulator
+- read more about ttr,ttc
+- thought about how everythig will fit together whjk
+* <2021-01-13 Wed>
+- dnd
+* <2021-01-14 Thu>
+- meeting notes
+  - minh is working with Reza on e2e and expect it to be done by end of month
+  - ignore neural network for now
+  - S x A should be discrete
+  - add negative reward for something...
+  - what to look into
+    1. reward shaping? MBB - Xubo (using ttr)
+    2. taking value function from HJ to init. value network
+    3. interrupt policy when unsafe
+       - Princeton Jamie Fisac
+    4. model/policy distiliation
+    5. follow-ahead payam
+  - what i'm doing is very ambitious so i need to work hard
+- in essence, what I'm trying to do is how to I use HJ to help train a NN,
+  I want to decouple knowing the position of obstacles for the initial time and still
+  be able to avoid objects while possibly moving twoards a goal
+* <2021-01-18 Mon>
+- create local host of github pages
+- do 1 308 question
+- do 2 320 question
+- work on sop

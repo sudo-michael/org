@@ -1,0 +1,95 @@
+#+TITLE: School
+* MATH 320
+:LOGBOOK:
+CLOCK: [2021-02-10 Wed 12:33]
+:END:
+
+Class: *MWF 1:30 - 2:20*
+Tutorial: /Th 12:30 - 1:30/
+https://canvas.sfu.ca/courses/59751/pages/how-math-320-will-be-run-in-spring-2021
+** Exams
+*** Midterm 1
+DEADLINE: <2021-02-08 Mon>
+- bad
+*** Midterm 2
+DEADLINE: <2021-03-15 Mon>
+** Random Proof Techniques
+- to show open
+  - all points are interior
+  - compliment is closed
+- compactness
+  - can make open cover of the complement of acompact set
+- inequality
+  - $|s_n| \leq |s| + |s_n - s| \leq \dots$
+** Homework
+Due every Friday by 10:00 AM PST
+* MATH 308
+:LOGBOOK:
+CLOCK: [2021-02-08 Mon 00:59]--[2021-02-08 Mon 01:34] =>  0:35
+:END:
+Class: *MWF 2:30 - 3:20*
+Tutorial /T 2:30 - 3:20/
+** Exams
+*** Midterm 1
+DEADLINE: <2021-02-08 Mon>
+*** Midterm 2
+DEADLINE: <2021-03-08 Mon>
+*** Midterm 3
+DEADLINE: <2021-03-29 Mon>
+** Homework
+*** TODO Homework 1
+DEADLINE: <2021-01-25 Mon>
+**** [ ] Problem 1
+**** [ ] Problem 2
+**** [ ] Problem 3
+
+* CMPT 498
+Meeting: *Th: 10:00 - 10:45*
+
+* optimized_dp
+:LOGBOOK:
+CLOCK: [2021-02-10 Wed 11:49]--[2021-02-10 Wed 12:24] =>  0:35
+CLOCK: [2021-02-09 Tue 15:15]--[2021-02-09 Tue 15:50] =>  0:35
+:END:
+- Make install script?
+  + conda install -c anaconda future
+  + conda install -c plotly plotly
+- figure out how shapes are represented
+- make sure half space are correct
+- Broadcasting:
+  + this is how we construct a grid
+  + first we need to define a grid, initially let's have all the points be 0
+    ~np.zeros(pts_each_dim)~
+  + then define range of points
+    ~lower, upper = ([-1, -1, -1], [1, 1, 1])~
+  + for each dim, we need to adjust a 1d array to be able to make sense with a
+    ~pts_each_dim~ size arraymake the shape of a
+  + to do this, we need to broadcast the linear interpolation to the correct shape
+    i.e if the 0th dimension had 60 points, it we would need the shape (60, 1, 1 ...)
+    to do this we broadcast np.linspace as np.broadcast(tmp, (x, 1, 1, 1,...))
+- Lower Half Space:
+  V < value <=> V - value < 0
+  positive sign if value > V
+  equality if V = value
+  negative if V < value
+  aka. it's bad to be lower than value
+
+  when we choose some value, anything lower than it is now considered bad (negative)
+- Upper Half Space:
+  V > value <=> -V + value < 0
+  positive if V > value
+  equality if V == value
+  negative if value < V
+
+  when we choose some value, anything higher than it is now considered bad
+
+
+
+* TODO pake pr on heterocl to add documentation to add the following
+- After following the installation instructions for "Install with Conda"
+  and activating the environment, heterocl fails to correctly import
+- Steps to reproduce
+-
+- Solution:
+
+- ~conda install -c anaconda future~

@@ -1,0 +1,54 @@
+% Created 2021-02-04 Thu 17:47
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Michael Lu}
+\date{\today}
+\title{Bridge}
+\hypersetup{
+ pdfauthor={Michael Lu},
+ pdftitle={Bridge},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 27.1 (Org mode 9.4)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+
+\section{Key Ideas}
+\label{sec:org22324d3}
+\begin{itemize}
+\item \emph{faiure states}
+\end{itemize}
+\section{Notes}
+\label{sec:org9baeac8}
+\begin{itemize}
+\item introduce new Safety Bellman Equation
+\item Safety Q-learning algorithm converges to safe state-action value in finite MDP
+(what about conti. case?)
+\item with deterministic dyanmics \(\dot{x} = f(x, u)\), the dp associated with control problem can be the disrete-time Bellman equation
+
+$$V(x) = max_{u \in \mathcal{U}}r(x, u) + \gamma V(x + f(x,u) \Delta t)$$
+\end{itemize}
+\section{Notation}
+\label{sec:org8919529}
+\begin{itemize}
+\item \(\mathcal{K}\) := set of states that are safe for all future times \(t \geq 0\)
+\item V(x) := supinf(l\(\Sigma\)\textsubscript{x})
+\end{itemize}
+\end{document}

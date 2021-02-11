@@ -1,0 +1,71 @@
+#+TITLE: Learning To Be Safe
+* Summary
+An agent trains a safety-critic to estimate the probability of
+failure in the future from a given state and action. Impose safey by constraining the actions of future policies to limit the probabilities of failure.
+
+
+SQRL learns a cirtic that evaluates wheather a state action pair will lead to unsafe behavior under a policy that is constraied by the safety-crtici itself
+
+pre-training: agent learns unsafe behavious
+fine-tuning phase: train policy on new target task, constraining policy's updates and selected actions with the safety-critic
+
+** entropy-regulared rl
+way to encourage exploration, avoid stuck in local optimam
+* Notation
+- $S$ := state
+- $A$ := action space
+- $\gamma$ := discount factor
+- $r : S \times A \rightarrow \mathbb{R}$ := reward function
+- $P(\cdot | s,a)$ := state transition dynamics
+- $\mu$ := initial state distributions
+- $\pi_\theta : S \times A \rightarrow [0, 1]$ := policy that maximizes
+  $J(\theta) = \sum_{t = 0}^{T - 1}\mathbb{E}_{(s_t, a_t) \sim \rho_\pi}[r(s_t, a_t) + \alpha$
+- $\mathcal{H}(\pi_\theta(\cdot | s_t))$ := policy's action entropy
+- $\alpha > 0$ := tuning parameter
+- $\mathcal{I}(s)$ := safety-incident indicator, treat failure states as terminal
+          if $\mathcal{I}(s) = 1$, the state is unsafe
+- $\mathbb{E}_{s_t \sim \rho_\pi}[\mathcal{I}(s_t)] < \epsilon_{safe}]$ := constraint
+- $Q_{safe}$ := safety critic
+- $\pi$ := unconstrained policy
+- $\bar{\pi}$ := $Q_{safe}$ constrained policy
+- $Q_{safe}^{\bar{\pi}$ := safety-critic that estimates future failure probability of a safety-constrained policy given a s, a
+- $\pi_{pre}^*$ := optimal pre-trained policy
+
+  
+
+* Pre-Training
+Goal: learin $Q_{safe}^{\bar{\pi}$ and $\pi_{pre}^*$,
+eq (2) estimates the true probability that $\pi$ will fail in the future
+
+$\mathcal{I}(s_t) + [1 - \mathcal{I}(s_t)(equation)]$
+if $\mathcal{I}(s_t) == 1$, this action is unsafe
+otherwise, measure that's the probability of failing in the future
+
+
+When training safe policy, we choose some $\epsilon$ which is our tollerence to take a potentially unsafe action
+
+* Experiments
+
+- minitaur quadruped locomotion environment
+  paper:
+  Sim-to-Real: Learning Agile Locomotion For Quadruped Robots
+  https://arxiv.org/pdf/1804.10332.pdf
+  code:
+  https://github.com/bulletphysics/bullet3/tree/master/examples/pybullet/gym/pybullet_envs/minitaur/envs
+
+
+* How is the safety-incident indicator $\mathcal{I}(s)$ determined, and does it change over time? e.g. it increases in size as the agent learns what states are safe and unsafe.
+* Are the avlues of $\mathcal{I}(s)$ either 0 or 1? And what is the correct mean
+* Is the code for the paper aviable?
+
+* words
+- entropy-regularized reinforcement learning
+
+
+
+
+
+
+
+Theorem 1: optimizing the policy learning objective by
+$\[ J_{target}(\theta, \alpha, v) = \mathbb{E}_{(s_t, a_t) \sim \rho_\pi} [ r(s_t, a_t) + \alpha \mathcal{H}(\pi_\theta(\cdot | s_t))]\]$

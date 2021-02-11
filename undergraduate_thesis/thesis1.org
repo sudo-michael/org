@@ -1,0 +1,259 @@
+#+TITLE: Thesis1
+
+* Honours Thesis
+** Statement
+- Can precomputed BRTs be used to partition objects in an unknown environment and could we use those results to increase the training speed of an agent?
+- How can precomputed BRTs be used to partition objects in an unknown environment, and to what extent could it be used to warm-start a deep RL (DQN)network
+
+** Questions
+
+
+* Winter Break
+** RL
+- $\pi$ = policy
+- $\theta$ = weights
+- $V^\pi(s_t)$ = expected future rewards from a given state
+- $V^\pi(s) = \sum_{a \in A} \pi(a | s) Q(s, a)$
+- $J(\theta) = E_\pi[\sum_t r_t]$ = sum rewards from trajectories we sample and tells us how good the policy is
+- $Q^\pi(s_t, a_t) = \sum_{t' = t} ^T E_{\pi\theta}[r(s_{t'}, a_{t'}) | s_t, a_t]$ = expected value of future rewards for some number of timesteps given we are at some state and take some action
+- $A^\pi(s_t, a_t) = Q^\pi(s_t, a_t) - V^\pi(s_t)$ = advantage function
+- on-policy := only work with a single policy, $Q(s, a)$ is dependent on our current policy $\pi(a | s)$, if we wanted to change our policy, we would need to sample more runs
+- off-policy := $Q(s,a)$ is learnt independely from $\pi(a+s)$, so we are free to change $\pi$ or be $\epsilon$-greedy and possibly choose different actions from our current policy
+- model-based := transition probabilities $p(s' | s, a)$ are given
+- model-free := learn purely from experience
+- online := learning as data comes in
+- off-line := batch learning
+
+```
+REINFORCE algotihm:
+1. sample {\tau^i} from \pi_\theta(a_t | s_t)
+   + need to generate samples 
+2. \grad_thetaJ(theta) \approx \sum_i(\sum_{t=1}^T \grad_\theta \log \pi_theta(a_t^i | s_t^i)())
+   + fit model to estimate return
+3. \theta  = \theta + \alpha\grad_theta J(\theta)
+   + update nn to improve policy
+```
+
+** Q-functions
+Q functions that map S x A -> R
+They mesure how good it is to take some action
+
+$Q^{new}(s_t, a_t) = Q(s_t, a_t) + \alpha(r_t + \gamma max_a Q(s_{t+1}, a) - Q(s_t, a_t))$
+
+where $\alpha$ is the learning rate
+
+
+** Actor-Critic
+- on-policy, model-free
+- can be batch or online
+- $V^\pi(s)$ is a neural net that we try to fit
+- policy evaluation using Monte Carlo policy evaluation (unbiased, but high varience)
+  - $V^\pi(s) = \sum r(s_t', a_t')$
+  - supervisied regession $L(\phi) = $\frac{1}{2}\sum_i abs(V_\phi(s_i) - y_i)^2$
+    between value function prediction and single-sample monte-carlo estimtae $y_i$
+
+
+the critic updates the value function parameters
+the actor updates the policy parameters $\theta$ for $\pi_\theta(a | s)$
+- what it is
+  actor: the policy
+  critic: value function
+  reduces the variance of policy gradient
+
+
+
+#+BEGIN_EXAMPLE
+batch actor-critic algorithm
+1. sample $\{s_i, a_i\}$ from $\pi_\theta(a | s)$ (run it on the robot)
+2. fit $V_\phi^\pi(s)$ to sample reward sums
+3. evaluate $A^\pi(s_i, a_i) = r(s_i, a_i) + V_\phi^\pi(s_i') - V_\phi^\pi(s_i)$
+4. calculate $\grad_theta(\theta)$
+5. $\theta  = \theta + \alpha\grad_theta J(\theta)$
+#+END_EXAMPLE
+
+** Deep Determinisitc Policy Gradient (DDPG)
+algorithm that concurrently learnins Q-function and policy
+- uses off-policy data
+
+
+** Value function HJ TTR TTC
+*** HJ
+**** $\mathcal{T} = \{ V_0(z) \leq 0\}$ = target set
+**** $V_o()$ = signed distance function
+****
+
+*** TTR
+- src: one-shot.pdf
+- find time to reach target from starting point $x$ where Player I tries to maximize the time while Player II uses a strtegy to minimize the time
+- given ttr function $\phi$, we can compute the BRT (one-stot)
+- Let $\Gamma \in R^n$ be a closed target with compact boundary
+- $T_x[u, d] = \min \{t | y(t) \in \Gamma \}$
+  is the payoff function
+- we can then formuate TTR as the following differential game
+  $\phi(x) := \min_{\theta \in \Theta}\max_{u \in U} T_x[u, \theta[u]]$
+  called the lower value function
+- Given $\phi$ we can obtain the t-backwards rechable set as
+  $B(t) = \{x | \phi(x) \leq t\}$
+-
+*** TTC
+*** Other notes 
+
+
+** Given obstacle compute ttr
+** union of min of TTR based of poloicy
+** Init V or Q function in RL
+** time to reach in RL is -dt reward
+** goal = sum discount*-dt
+** Related papers
+- Learning to be Safe: Deep RL with a Safety Critic
+  https://arxiv.org/pdf/2010.14603.pdf
+  + uses soft actor-critic algorithm, notes that any off-policy algorithm can be used as long it explores sufficiently
+- Least-Restrictive Multi-Agent Collision Avoidance via Deep Meta Reinforcement Learning and Optimal Control
+  https://sfumars.com/wp-content/papers/2021_icra_lrcam.pdf
+  + BRS value means that higher is safer and negative value is inside the BRT
+  + uses the infinite time horizon BRS
+
+- TTR-Based Reward for Reinforcement Learning with Implicit Model Priors
+  https://sfumars.com/wp-content/papers/2020_icra_ttr_rl.pdf
+
+  + TTR is defined as the shortest time it takes for a state to be in the goal functtion, and we can obtain this from solving HJ PDE
+
+  + reward as $r(s) = -\phi(s')$
+    state with lower arrival time should be given a higher reward
+
+
+
+
+
+
+
+
+* Simulator
+** Agent
+
+** Possible Experiments
+
+** Model
+- will need to tune general parametrs
+- possible model-free RL algorithms:
+  1. PPO (policy-based, model-free)
+  2. TRPO (policy-based, model-free)
+  3. DDPG (value-based, model-free)
+
+
+* Plan
+** Try with dubin car (3d, 4d)
+
+https://www.ams.org/journals/tran/1983-277-01/S0002-9947-1983-0690039-8/S0002-9947-1983-0690039-8.pdf
+* Notes/observations
+- if i want to use TTR, I need a goal
+- also need to implement that in optimized_dp
+- observable state or world state do I use?
+* Possible Attacks
+1. reward shapping MBB -tubo
+2. take value function from HJ to init. value network
+3. inerpret poly when unsfe
+4. model/policy distilaition
+5. follow ahead
+
+** Reward shaping
+
+** Follow-head
+*** LBGP: Learning Based Goal Planning for Autonomous Following in Front
+
+https://arxiv.org/pdf/2011.03125.pdf
+- uses a reward function to discriminate robot being too close or too far
+- had a curricum learning to train agent
+  - straight
+  - circles
+  - smoothed curve
+  - simulated trajectories
+
+
+* Robot Crowd Navigation algorithms
+** CADRL
+https://arxiv.org/pdf/1910.11689.pdf
+- trains value network using DQN  with experience replay
+- assumes fixed number of agents, value network requires a fixed-sized input
+- if there are less than assumed agents, pad observation space if there are fewer agents in the environment
+** depth image or LiDAR is needed
+* Related Papers
+** Decentralized Non-communicating Multiagent Collision Avoidance with Deep Reinforcement Learning
+https://arxiv.org/pdf/1609.07845.pdf
+
+- develop value network that encodes estimated time to the goal given an agent's joint configuration (position and vel) with its neighbours
+- introduces reward function for reaching goal that penalizes agent when it goes too close to something
+- init value function by a supervisied training on a set of traj. generated by baseline policy
+  - data := $\{s^{in}, y)\}$, where $y = \gamma^{t_g*v_{pref}}$, where $t_g$ is TTR
+** Hamilton-Jacobi-Bellman Equations for Q-Learning in Continuous Time
+http://proceedings.mlr.press/v120/kim20b/kim20b.pdf
+
+- Q-function corresponds to unique viscosity soltuion of HJB equation
+- Q-learning algorithm for continious-time dynamical systems with DQN-like algorithm
+- Q-function $Q(x,u,t) := inf(\int_{0}^{T}r(x(s), u(s))ds + q(x(T)) | x(t) = x, u(t) = u)$
+  minimal cost incured from time $t$ to $T$ starting from $x(t) = x$ with $u(t) = u$
+- used to verify the optimality of a given control and to design an optimal control strategy
+** Hamilton–Jacobi Deep Q-Learning for Deterministic Continuous-Time Systems with Lipschitz Continuous Controls
+https://arxiv.org/pdf/2010.14087.pdf
+
+** Learning to be Safe: Deep RL with a Safety Critic
+https://arxiv.org/pdf/2010.14603.pdf
+
+- when training, have environment for
+  1. safe pre-training, in which failures can be tolerated
+  2. safety-incident indicator I(s) which indicates if a given state is unsafe or not
+- learing in two phases:
+  1. learning an exploratory policy that solves a simpler/safer task in the pre-training environment
+  2. transferring the learned policy to a more safety-critical target task
+- algorithm SQRL, off-policy
+- safe q-function
+  $Q^\pi_{safe}(s_t, a_t) = I(s_t) + (1 - I(s_t))\sum_{t'=t+1}^{T}\mathbb{E}[\gamma_{safe}^{t'-t}I(s_{t'})]$
+  - estimtates the true probability that $\pi$ will fail in the future if stating at state $s$ and taking action $a$
+- there's a cummulative discount probability of failutre is estimated by the bellman equation
+- to learn new tasks without failure, it must first explore a diverse set of state-actions pairs, including unsafe state-action pairs, during pre-training
+- in finite-tuning phase, init policy
+
+** Reachability-Based Safe Learning with Gaussian Processes
+https://people.eecs.berkeley.edu/~jfisac/papers/Safe_Learning.pdf
+
+- siwtch to safe control when near boundary of critical level set
+- PGSD is model-free policy search algorithm
+
+
+
+
+
+
+
+* Random Papers
+** A Study of Reinforcement Learning in the Continuous Case by the Means of Viscosity Solutions
+https://www.ri.cmu.edu/pub_files/pub1/munos_remi_1999_3/munos_remi_1999_3.pdf
+** Obstacle Avoidance and Navigation Utilizing Reinforcement Learning with Reward Shaping
+https://arxiv.org/pdf/2003.12863.pdf
+
+- does reward shapping for DDPG and PPO
+  $R^{lyap}(s_{t+1}, a_{t+1}) = R(s_t, a_t) + n(\gamma R(s_{t+1}, a_{t+1}) - R(s_{t}, a_{t}))$
+  where $n$ is tuning parameter
+- state space is 24 LiDAr points, action is linear and angular velocity
+- seem to only train in one environment
+
+* Random Ideas
+- let's suppose agents had state {pos_x, pos_y, vel_x, vel_y,_r}
+  then if we wanted to represent stationary objects, we just set vel to be 0
+- could lidar be used to just consider k nearest moving agents?
+- then represent our state space as (s, r1, r2, ... rn)
+- then try using osme safe-q function to learn
+- where I(s) is the union of precomputed brts?
+- is there a difference between policy distiliation and having a learning curriculum?
+
+
+
+
+  
+
+* What do you look for when reading papers?
+ - currently take a few notes on the main contributions of the work
+ - toolbox, ways of modeling things
+ - what is the state space, action space ect..
+ - try to ask questions on how i could improve it, or what else could be done
+ - look at experiements

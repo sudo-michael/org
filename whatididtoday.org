@@ -2,5 +2,61 @@
 # SPC m d t insert date
 
 * <2021-01-02 Sat> 
-** read x pages of Atomic Habits
+- read half of Atomic Habits
+* <2021-02-03 Wed> 
+- I don't really remember... wow
+* <2021-01-04 Mon> 
+- [ ] take notes of 2 lectures from https://www.youtube.com/watch?v=w_IIP-swuVo&list=PLkFD6_40KJIwhWJpGazJ9VSj9CFMkb79A&index=4 (3hr)
+- [X] find faculty / supervisors for uofa (30min)
+- [ ] study rudin for (1hr)
+- [X] upload pictures and create bio on tinder (30min)
+- [X] email person abount job (10min)
+* <2021-01-05 Tue>  
+- [ ] study rudin for (1hr)
+- [ ] take notes of 2 lectures from https://www.youtube.com/watch?v=w_IIP-swuVo&list=PLkFD6_40KJIwhWJpGazJ9VSj9CFMkb79A&index=4 (3hr)
+- [ ] fill out research experience (30m)
+- [ ] go over sop again (30m)
+- [X] 1 leetcode med (10m)
+- [ ] work on optimized_dp
+* <2021-01-06 Wed> 
+- [ ] get out of bed by 8:30
+- [ ] study rudin for (1hr)
+- [ ] take notes of 2 lectures from https://www.youtube.com/watch?v=w_IIP-swuVo&list=PLkFD6_40KJIwhWJpGazJ9VSj9CFMkb79A&index=4 (3hr)
+- [ ] fill out research experience (30m)
+- [ ] go over sop again (30m)
+- [ ] work on optimized_dp (1hr)
+- [ ] get login screne to work on laptop (1hr)
+- [ ] 1 leetcode med (20m)
+- [ ] upload pictures and create bio on tantan (30min)
+  - tantan is my new best friend
 
+* <2021-01-09 Sat> 
+- [ ] watch up to lec 8 cs 285
+- [ ] organize what i need to research for my thesis
+
+* <2021-01-11 Mon> 
+- attended math 309
+- attended math 320
+- attended math 308
+- worked on thesis (1hr)
+  
+* <2021-01-12 Tue> 
+- [X] email texet about coopting
+- [X] fill out research for ualberta
+- [ ] work on sop
+
+* <2021-01-24 Sun>
+- [X] finish 308
+- [ ] read over sop once
+- [X] go over 320 notes from friday
+
+* <2021-01-25 Mon>
+- [X] read over sop once
+- [X] go over hw again before 1
+- [X] research baby
+
+* <2021-01-27 Wed>
+- oob: 11:23
+
+* <2021-01-28 Thu>
+- oob: 10:56

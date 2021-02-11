@@ -1,0 +1,71 @@
+#+TITLE: Meetings
+* Template
+source: https://docs.google.com/document/d/1QdpejrM0UyEfh9j9Srj3OZjB8Sq-iuUaMzcEHRKvcRU/edit
+** New ideas you’re excited about (10 min)
+[Fill in this part. Short descriptions (questions, a few sentences about idea and why it’s interesting/important) are helpful. Nothing heavyweight. It’s a discussion prompt.]
+
+
+** Papers you’ve read recently that are interesting/influential/important (5 min)
+[Fill in this part. Include links to papers.]
+
+
+** Research project(s) discussion (40 min)
+*** Updates on progress
+[Fill in this part. Include any supplementary material that would be helpful, such as links to drafts of papers or paper sections, links to lab notebooks, code, etc.]
+
+
+*** New findings
+[Fill in this part.]
+
+
+*** New questions
+[Fill in this part.]
+
+
+*** Anything else / miscellaneous
+[Fill in this part.]
+
+
+** Next steps (5 min)
+*** Action items for you:
+[Fill in this part.]
+
+*** Action items for Mo:
+[Fill in this part.]
+
+* <2021-01-14 Thu>   
+** New ideas you’re excited about (10 min)
+- what's the end goal of doing research with HJ reachability? is it to be able to solve an HJ PDE of high dimention in real time?
+-
+
+** Papers you’ve read recently that are interesting/influential/important (5 min)
+
+
+** Research project(s) discussion (40 min)
+*** Updates on progress
+- went through cs285 lectures 1-9
+*** New findings
+*** New questions
+- When training model, how would I represent the states and actions?
+  Since the value function from optimzied_dp is an array for some grid, would I discretize everything? I thought about using a DQN but I wasn't sure how I would incorporate the value function to the weights of the DQN
+- I'm still not sure how to bridge the gap between value function and RL
+- How long should an episode be?
+
+
+
+
+*** Anything else / miscellaneous
+[Fill in this part.]
+
+
+** Next steps (5 min)
+*** Action items for you:
+
+*** Action items for Mo:
+* <2021-01-29 Fri>
+** Not a good week, meeting
+- how does safety modify what rewards we choose
+- robots havebehaviour "unsure" confidience/disconfert
+- make task easy, pretrain with BRT
+- replace Q
+- replace Q with union of HJ value

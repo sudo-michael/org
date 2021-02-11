@@ -1,0 +1,10 @@
+#+TITLE: Spinningup
+
+https://spinningup.openai.com/en/latest/user/installation.html
+
+#+begin_src shell
+conda activate spinningup
+#+end_src
+
+* note
+- randommly have mujoco installed.. i have no idea how to resolve python installation works still...

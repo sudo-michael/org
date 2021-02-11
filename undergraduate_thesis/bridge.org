@@ -1,0 +1,54 @@
+#+TITLE: Bridge
+#+PAPER: Bridging Hamilton-Jacobi Safety Analysis and Reinforcement Learning
+#+LINK: https://people.eecs.berkeley.edu/~jfisac/papers/Bridging_Safety_and_RL.pdf
+
+* Key Ideas
+- In infinite-horizon case, value function no longer changes in finite time so
+
+  $$V(x) = \min \{ l(x), max_{u \in U}V(x + f(x, u)\Deltat)\}$$
+
+  it is not generally possibel to converge to the fixed point by application of value iteration or temporal difference learning.
+
+- However, this discrete-time discounted dynamic programming equation (7)
+
+  \[ V(x) = (1 - \gamma) + \gamma min\{ l(x), max_{u \in U}V(x + f(x, u)\Delta t\}\]
+
+- From Proposition 1, the limit  ff
+
+
+
+
+
+- at every instance, there is small probability $1 - \gamma$ of transitioning to state where no more rewards will be accured. So  $1 - \gamma$ can be seen as the probability of transitioning ot a terminal state.
+
+- Theorem 1 proves that eq. 7 is somethign... makes metric lipschitz
+
+
+* Notes
+- introduce new Safety Bellman Equation
+- Safety Q-learning algorithm converges to safe state-action value in finite MDP
+  (what about conti. case?)
+- with deterministic dyanmics $\dot{x} = f(x, u)$, the dp associated with control problem can be the disrete-time Bellman equation
+
+  $$V(x) = max_{u \in \mathcal{U}}r(x, u) + \gamma V(x + f(x,u) \Delta t)$$
+- In HJ, we have a value equation, $V(x)$, and solving it represents how safe a state is, negative bad
+
+- In infinite-horizon case, value function no longer changes in finite time so
+  $$V(x) = \min \{ l(x), max_{u \in U}V(x + f(x, u)\Deltat)\}$$
+
+- it is not generally possibel to converge to the fixed point by application of value iteration or temporal difference learning
+
+
+- $l(x) \geq 0 \Leftrightarrow x \in K$
+- rewards:
+  - r_{minitaur}(s,a) = vel_g + |vel_g - vel_{cur}| - 0.01 * acc
+
+
+
+* Notation
+- $\mathcal{K}$ := set of states that are safe for all future times $t \geq 0$
+
+- $X \subset \mathbb{R}^n$ := dynamic system universe
+
+- $V(x)$ := $sup_{u(\cdot)}inf_{t \geq 0}(l\xi)$ , xi, represents the minimum payoff $l$ achived ove time by a trajectory starting at each state $x \in X$, negative bad
+- $l(x)$ := signed distance

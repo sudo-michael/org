@@ -1,0 +1,127 @@
+% Created 2021-01-12 Tue 17:47
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Michael Lu}
+\date{\today}
+\title{Thesis1}
+\hypersetup{
+ pdfauthor={Michael Lu},
+ pdftitle={Thesis1},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 27.1 (Org mode 9.4)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+
+\section{Honours Thesis}
+\label{sec:orgf49f859}
+\subsection{Statement}
+\label{sec:orgc89635e}
+How can precomputed BRTs be used to partition objects in an unknown environment,
+and to what extent could it be used to warm-start a deep RL (DQN)network
+
+\section{Winter Break}
+\label{sec:org9a201c2}
+\subsection{RL}
+\label{sec:org4f87140}
+\(\pi\) = policy
+\(\theta\) = weights
+\(V^\pi(s_t)\) = expected future rewards from a given state
+\(J(\theta) = E_\pi[\sum_t r_t]\) = sum rewards from trajectories we sample and tells us how good the policy is
+\(Q^\pi(s_t, a_t) = \sum_{t' = t} ^T E_{\pi\theta}[r(s_{t'}, a_{t'}) | s_t, a_t]\) = expected value of future rewards for some number of timesteps given we are at some state and take some action
+\(A^\pi(s_t, a_t) = Q^\pi(s_t, a_t) - V^\pi(s_t)\) = advantage function
+on-policy := only work with a single policy
+off-policy :=
+
+```
+REINFORCE algotihm:
+\begin{enumerate}
+\item sample \{\(\tau\)\textsuperscript{i}\} from \(\pi\)\textsubscript{\(\theta\)}(a\textsubscript{t} | s\textsubscript{t})
+\begin{itemize}
+\item need to generate samples
+\end{itemize}
+\item \grad\textsubscript{thetaJ}(theta) \(\approx\) \(\sum\)\textsubscript{i}(\(\sum\)\textsubscript{t=1}\textsuperscript{T} \grad\textsubscript{\(\theta\)} \(\log\) \(\pi\)\textsubscript{theta}(a\textsubscript{t}\textsuperscript{i} | s\textsubscript{t}\textsuperscript{i})())
+\begin{itemize}
+\item fit model to estimate return
+\end{itemize}
+\item \(\theta\)  = \(\theta\) + \(\alpha\)\grad\textsubscript{theta} J(\(\theta\))
+\begin{itemize}
+\item update nn to improve policy
+\end{itemize}
+\end{enumerate}
+```
+
+\subsection{Q-functions}
+\label{sec:org4d1b6fc}
+Q functions that map S x A -> R
+They mesure how good it is to take some action
+
+\subsection{Actor-Critic}
+\label{sec:orgbe3d4d7}
+the critic updates the value function parameters
+the actor updates the policy parameters \(\theta\) for \(\pi \theta\)(a | s)
+\begin{verbatim}
+batch actor-critic algorithm
+1. sample {s_i, a_i} from \pi_\theta(a | s) (run it on the robot)
+2. fit V_\phi^\pi(s) to sample reward sums
+3. evaluate A^\pi(s_i, a_i) = r(s_i, a_i) + V_\phi^\pi(s_i') - V_\phi^\pi(s_i)
+4. calculate \grad_theta(\theta)
+5. \theta  = \theta + \alpha\grad_theta J(\theta)
+
+\end{verbatim}
+
+
+\subsection{DQN}
+\label{sec:org5bf4669}
+
+\subsection{Value function HJ TTR TTC}
+\label{sec:orgebe4578}
+\subsubsection{HJ}
+\label{sec:org1fe8502}
+\subsubsection{TTR}
+\label{sec:orgcef57ef}
+\begin{itemize}
+\item find time to reach target from starting point \(x\) where Player I tries to maximize the time while Player II uses a strtegy to minimize the time
+\item given ttr function \(\phi\), we can compute the BRT (one-stot)
+\end{itemize}
+
+\subsubsection{TTC}
+\label{sec:org5b02578}
+\subsubsection{Other notes}
+\label{sec:org44f1722}
+
+
+\subsection{Given obstacle compute ttr}
+\label{sec:orgdfceaa3}
+\subsection{union of min of TTR based of poloicy}
+\label{sec:orge2894dd}
+\subsection{Init V or Q function in RL}
+\label{sec:orgf41e5a3}
+\subsection{time to reach in RL is -dt reward}
+\label{sec:org1462e21}
+\subsection{goal = sum discount*-dt}
+\label{sec:org94f8b2d}
+\section{Simulator}
+\label{sec:org6f610a2}
+\section{Plan}
+\label{sec:orgf2d26c6}
+\subsection{Try with dubin car (3d, 4d)}
+\label{sec:org0505fb0}
+\end{document}

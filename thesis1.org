@@ -8,11 +8,10 @@ and to what extent could it be used to warm-start a deep RL network
 * TODO Winter Break
 ** Q-functions
 ** Actor-Critic 
-** CS 289 Lec 1-9
+** 9
 ** Value function HJ TTR TTC
 ** Given obstacle compute ttr
 ** union of min of TTR based of poloicy
 ** Init V or Q function in RL
 ** time to reach in RL is -dt reward
 ** goal = sum discount*-dt
-

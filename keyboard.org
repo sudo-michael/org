@@ -1,10 +1,21 @@
 #+TITLE: Keyboard
 
-This is a blog about me building a keyboard
-* TODO build keyboard [0%]
-- [ ] lube stabilzers
-- [ ] lube switches
-- [ ] install stabilzers
-- [ ] verify layout is correct
-- [ ] solder
-- [ ] remap keys
+* DONE build keyboard [100%]
+Finished: <2020-12-26 Sat>
+- [X] lube stabilzers
+- [X] lube switches
+- [X] install stabilzers
+- [X] verify layout is correct
+- [X] solder
+- [X] remap keys
+** What to do next time
+*** Good
+- durock stablizers are good
+- zealios are good
+- 65g is good, but might be nice to be a bit lighter
+- film
+*** Bad
+- test keys with keycaps since spacebar wouldn't go up all the way
+- take more time applying lube, keyboard time >>>>> time spend lubing
+- might be better to have a split keyboard instead
+- lube stabilzers more and bandaid mode it

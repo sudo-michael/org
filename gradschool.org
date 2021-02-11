@@ -208,7 +208,9 @@ Questions for you to ask other interviewers (like program or admissions director
     How would you compare this program to X and Y?
     Is there funding available for attending things like conferences or summer schools?
     What are the career outcomes for students in this program?
-
+* UBC
+mlu98
+Lotad00123!
 
 * TODO Mcgill [100%]
 DEADLINE: <2021-01-01 Fri>
@@ -225,6 +227,7 @@ DEADLINE: <2021-01-31 Sun>
 - [X] submit
 - [ ] January 31st
 - [ ] GARS
+- user: lu.michael@outlook.com
 - gars: ik7hal0rp
 * TODO SFU [33%]
 DEADLINE: <2021-02-08 Mon>
@@ -237,12 +240,6 @@ DEADLINE: <2021-02-08 Mon>
   
   I am interested in reinforcement learning, Hamilton-Jacobi reachability, and computer vision.
   I want to develop robust algorithms that will help artificial agents, such as self-driving cars, learn and navigate unknown environments safely.
-* TODO UBC
-https://www.cs.ubc.ca/students/grad/admissions
-- upload proof of canadian citizenship (passport)
-- ref jan 6
-** Min B+ in 3rd and 4th year courses
-** 12+ units of cs A- or above
 * References
 ** Mo Chen
 Assistant Professor
